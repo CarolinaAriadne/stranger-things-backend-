@@ -1,0 +1,27 @@
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout
+      - uses: actions/setup-node
+        with: 
+          node-version: 12
+      - name: Instala dependências
+        run: npm install
+      - name: Executa pacote eslint
+        run: npx eslint  
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1.4.4
+        with:
+          node-version: 12
+
+  stylelint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1.4.4
+      
