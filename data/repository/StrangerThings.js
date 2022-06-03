@@ -25,3 +25,5 @@ class StrangerThingsRepository {
 }
 
 module.exports = StrangerThingsRepository;
+
+// push inicial
