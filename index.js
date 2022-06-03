@@ -20,11 +20,6 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
-// console.log(hereIsTheUpsideDown);
-// const changeBoolean = hereIsTheUpsideDown.toLocaleLowerCase() === 'true';
-// console.log(changeBoolean);
-
-// fonte utilizada, para mudar string para bool: https://pt.stackoverflow.com/questions/235272/como-converter-uma-string-em-booleano
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
